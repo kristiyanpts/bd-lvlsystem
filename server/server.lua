@@ -57,7 +57,7 @@ local function AddReputation(citizenid, job, reputation)
         end
 
         if CanPlayerReceiveExperience(citizenid) then
-            currentReputation[job] = currentReputation[job] + reputation
+            currentReputation[job] = tonumber(currentReputation[job]) + reputation
 
             if currentReputation[job] >= Config.MaxXP then
                 currentReputation[job] = Config.MaxXP
