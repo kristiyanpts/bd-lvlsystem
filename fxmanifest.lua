@@ -1,12 +1,14 @@
 fx_version 'cerulean'
-lua54 'yes'
-description 'Leveling System by Bulgar Development'
 game 'gta5'
-author 'kristiyanpts'
+lua54 'yes'
+
+author 'Kristiyanpts & NeenGame'
+description 'Leveling System by Bulgar Development'
+version '2.0.0'
 
 shared_script {
-	'config.lua',
 	'@ox_lib/init.lua',
+	'config.lua',
 }
 
 client_scripts {
@@ -14,12 +16,7 @@ client_scripts {
 }
 
 server_scripts {
-	'@oxmysql/lib/MySQL.lua', 
+	'@oxmysql/lib/MySQL.lua',
+	'server/framework/*.lua',
 	'server/*.lua',
-}
-
-dependency '/assetpacks'
-
-escrow_ignore {
-    'config.lua',
 }
